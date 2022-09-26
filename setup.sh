@@ -200,15 +200,6 @@ az vm extension set \
   --resource-group $RESOURCEGROUP \
   --settings '{"commandToExecute":"apt-get -y update && apt-get -y install nginx && hostname > /var/www/html/index.html"}'
 
-az vm create \
-  --resource-group $RESOURCEGROUP \
-  --name tbappvmjumpbox \
-  --admin-username $USERNAME \
-  --admin-password $PASSWORD \
-  --image UbuntuLTS \
-  --vnet-name tbappvnet \
-  --subnet tbappsubnet \
-  
 ## ## ## ## ## ##
 # Script to reconfigure the lab environment and introduce problems that the student diagnoses and corrects.
 # POINT HEALTH PROBE AT PORT 85 IN BACKEND POOL
